@@ -8,8 +8,8 @@ export interface IProduct {
 
 export interface IProductService {
   createProduct(data: { name: string; price: number }): IProduct;
-  getProduct(): IProduct[];
-  getOneProduct(data: { id: number }): IProduct | undefined;
+  getProducts(): IProduct[];
+  getOneProduct(id: number): IProduct | undefined;
   updateProduct(id: number, data: { name?: string; price?: number }): IProduct;
   deleteProduct(id: number): { message: string };
 }
